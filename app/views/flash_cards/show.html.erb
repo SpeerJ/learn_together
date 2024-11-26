@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @flash_card %>
+
+<div>
+  <%= link_to "Edit this flash card", edit_flash_card_path(@flash_card) %> |
+  <%= link_to "Back to flash cards", flash_cards_path %>
+
+  <%= button_to "Destroy this flash card", @flash_card, method: :delete %>
+</div>

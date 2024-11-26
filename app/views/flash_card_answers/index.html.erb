@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Flash card answers" %>
+
+<h1>Flash card answers</h1>
+
+<div id="flash_card_answers">
+  <% @flash_card_answers.each do |flash_card_answer| %>
+    <%= render flash_card_answer %>
+    <p>
+      <%= link_to "Show this flash card answer", flash_card_answer %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New flash card answer", new_flash_card_answer_path %>

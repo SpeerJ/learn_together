@@ -1,0 +1,12 @@
+<% content_for :title, "Editing flash card" %>
+
+<h1>Editing flash card</h1>
+
+<%= render "form", flash_card: @flash_card %>
+
+<br>
+
+<div>
+  <%= link_to "Show this flash card", @flash_card %> |
+  <%= link_to "Back to flash cards", flash_cards_path %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @flash_card_answer %>
+
+<div>
+  <%= link_to "Edit this flash card answer", edit_flash_card_answer_path(@flash_card_answer) %> |
+  <%= link_to "Back to flash card answers", flash_card_answers_path %>
+
+  <%= button_to "Destroy this flash card answer", @flash_card_answer, method: :delete %>
+</div>
