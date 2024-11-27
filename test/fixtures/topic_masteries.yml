@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  topic: one
+  last_studied: 2024-11-26
+  user: one
+  mastery_score: 9.99
+
+two:
+  topic: two
+  last_studied: 2024-11-26
+  user: two
+  mastery_score: 9.99
