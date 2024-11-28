@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Subject.find_or_create_by!(
+  name: 'Media Lengua',
+).update!(
+  description: 'A language combining Spanish base words and Kichwa suffixes'
+)

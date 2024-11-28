@@ -4,6 +4,7 @@ class CreateFlashCards < ActiveRecord::Migration[8.0]
       t.string :name
       t.string :description
       t.references :topic, null: false, foreign_key: true
+      t.decimal :difficulty, precision: 2, scale: 1
       t.string :type, null: false, default: "HiddenAnswerFlashCard"
 
       t.timestamps

@@ -35,6 +35,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_27_011905) do
     t.string "name"
     t.string "description"
     t.integer "topic_id", null: false
+    t.decimal "difficulty", precision: 2, scale: 1
     t.string "type", default: "HiddenAnswerFlashCard", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
