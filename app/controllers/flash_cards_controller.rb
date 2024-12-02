@@ -1,4 +1,5 @@
 class FlashCardsController < ApplicationController
+  allow_unauthenticated_access only: %i[ index show ]
   before_action :set_flash_card, only: %i[ show edit update destroy ]
 
   # GET /flash_cards or /flash_cards.json

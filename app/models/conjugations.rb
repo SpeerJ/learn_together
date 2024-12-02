@@ -1,113 +1,75 @@
 # frozen_string_literal: true
 
-Conjugations = {
-  "Objects" => {
-    "-wa" => "1s.OBJ",
-    "-ri" => "3s.IDO"
-  },
-  "Temporal Aspects" => {
-    "-na" => "Durative/Infinitive",
-    "-gri" => "Ingressive",
-    "-shka" => "Past Participle",
-    "-shpa" => "Same Subject Gerund",
-    "-kpi" => "Different Subject Subordinator",
-    "-k" => "Habitual/Agent",
-    "-i" => "Nominal/Verbal infinitive"
-  },
-  "Auxiliaries" => {
-    "-n" => "Euphonic"
-  },
-  "Atemporal Aspects" => {
-    "-ri" => "Reflexive"
-  },
-  "Casuals" => {
-    "-shina" => "Comparative",
-    "-kama" => "Terminative",
-    "-man" => "Allative/Dative",
-    "-manta" => "Ablative/Causal",
-    "-ta" => "Accusative/Adverbial/Prolative",
-    "-pak" => "Benefactive/Genitive",
-    "-pi" => "Locative",
-    "-wan" => "Instrumental/Comitative"
-  },
-  "Conjunctives" => {
-    "-ndi(n)" => "Inclusive/Comitative",
-    "-pura" => "Conjunctive",
-    "-pish/-pash" => "Additive",
-    "-tak" => "Contrastive"
-  },
-  "Derived Qualitatives" => {
-    "-pacha" => "Superlative"
-  },
-  "Derived Quantities" => {
-    "-sapa" => "Augmentative",
-    "-siki" => "Exceditive?/Pejorative/Exaggeration",
-    "-pish/-pash" => "Additive"
-  },
-  "Derived Radicals" => {
-    "-mu" => "Cislocative",
-    "-ku" => "Reflexive/Progressive",
-    "-ri" => "Reflexive",
-    "-chi" => "Causative",
-    "-naku" => "Reciprocal",
-    "-pura" => "Conjunctive",
-    "-gri" => "Ingressive",
-    "-ngakaman" => "Terminative Verb Marker",
-    "-ngapa(k)" => "Propositive/Benefactive"
-  },
-  "Evidential Clitics" => {
-    "-ka" => "Topic",
-    "-mi/-ma" => "Focus/Validator"
-  },
-  "Specific Clitics" => {
-    "-lla" => "Limitative",
-    "-ra(k)" => "Continuative"
-  },
-  "Modals" => {
-    "-man" => "Conditional",
-    "-na" => "Future/Obligative"
-  },
-  "Operators" => {
-    "-chu" => "Interrogative",
-    "-chu" => "Negation"
-  },
-  "Personal Verb Markers" => {
-    "-ni" => "1s.PRES",
-    "-ngi" => "2s.PRES",
-    "-n" => "3s.PRES",
-    "-nchi(k)" => "1p.PRES",
-    "-ngichi(k)" => "2p.PRES",
-    "-n(kuna)" => "3p.PRES"
-  },
-  "Personal Temporal Verb Markers" => {
-    "-shun" => "1p.FUT",
-    "-ngi" => "2s.FUT",
-    "-ngichi(k)" => "2p.FUT",
-    "-nga" => "3s.FUT",
-    "-n(kuna)" => "3p.FUT",
-    "-i" => "2s.imperative",
-    "-ichi(k)" => "2p.imperative",
-    "-shun" => "Exclusive Exhortative",
-    "-shunchik" => "Inclusive Exhortative"
-  },
-  "Pluralizer" => {
-    "-kuna" => "Plural"
-  },
-  "Possessives" => {
-    "-pa(k)" => "Alienable Possessive",
-    "-yuk" => "Inalienable Possessive"
-  },
-  "Pragmatic Evidentials" => {
-    "-chari" => "Dubitative",
-    "-shi" => "Supposition",
-    "-karin" => "Exceditive Affirmation",
-    "-mari" => "Confirmative Affirmation"
-  },
-  "Temporal" => {
-    "-k" => "Habitual Preterite",
-    "-rka" => "Simple Preterite",
-    "-shka" => "Perfective/Past Participle"
-  }
-}.freeze
-
-
+Conjugations = { "Objects" => { "1s.OBJ" => "-wa", "3s.IDO" => "-ri" },
+                 "Temporal Aspects" =>
+                   { "Durative/Infinitive" => "-na",
+                     "Ingressive" => "-gri",
+                     "Past Participle" => "-shka",
+                     "Same Subject Gerund" => "-shpa",
+                     "Different Subject Subordinator" => "-kpi",
+                     "Habitual/Agent" => "-k",
+                     "Nominal/Verbal infinitive" => "-i" },
+                 "Auxiliaries" => { "Euphonic" => "-n" },
+                 "Atemporal Aspects" => { "Reflexive" => "-ri" },
+                 "Casuals" =>
+                   { "Comparative" => "-shina",
+                     "Terminative" => "-kama",
+                     "Allative/Dative" => "-man",
+                     "Ablative/Causal" => "-manta",
+                     "Accusative/Adverbial/Prolative" => "-ta",
+                     "Benefactive/Genitive" => "-pak",
+                     "Locative" => "-pi",
+                     "Instrumental/Comitative" => "-wan" },
+                 "Conjunctives" =>
+                   { "Inclusive/Comitative" => "-ndi(n)",
+                     "Conjunctive" => "-pura",
+                     "Additive" => "-pish/-pash",
+                     "Contrastive" => "-tak" },
+                 "Derived Qualitatives" => { "Superlative" => "-pacha" },
+                 "Derived Quantities" =>
+                   { "Augmentative" => "-sapa",
+                     "Exceditive?/Pejorative/Exaggeration" => "-siki",
+                     "Additive" => "-pish/-pash" },
+                 "Derived Radicals" =>
+                   { "Cislocative" => "-mu",
+                     "Reflexive/Progressive" => "-ku",
+                     "Reflexive" => "-ri",
+                     "Causative" => "-chi",
+                     "Reciprocal" => "-naku",
+                     "Conjunctive" => "-pura",
+                     "Ingressive" => "-gri",
+                     "Terminative Verb Marker" => "-ngakaman",
+                     "Propositive/Benefactive" => "-ngapa(k)" },
+                 "Evidential Clitics" => { "Topic" => "-ka", "Focus/Validator" => "-mi/-ma" },
+                 "Specific Clitics" => { "Limitative" => "-lla", "Continuative" => "-ra(k)" },
+                 "Modals" => { "Conditional" => "-man", "Future/Obligative" => "-na" },
+                 "Operators" => { "Interrogative" => "-chu", "Negation" => "-chu" },
+                 "Personal Verb Markers" =>
+                   { "1s.PRES" => "-ni",
+                     "2s.PRES" => "-ngi",
+                     "3s.PRES" => "-n",
+                     "1p.PRES" => "-nchi(k)",
+                     "2p.PRES" => "-ngichi(k)",
+                     "3p.PRES" => "-n(kuna)" },
+                 "Personal Temporal Verb Markers" =>
+                   { "1p.FUT" => "-shun",
+                     "2s.FUT" => "-ngi",
+                     "2p.FUT" => "-ngichi(k)",
+                     "3s.FUT" => "-nga",
+                     "3p.FUT" => "-n(kuna)",
+                     "2s.imperative" => "-i",
+                     "2p.imperative" => "-ichi(k)",
+                     "Exclusive Exhortative" => "-shun",
+                     "Inclusive Exhortative" => "-shunchik" },
+                 "Pluralizer" => { "Plural" => "-kuna" },
+                 "Possessives" =>
+                   { "Alienable Possessive" => "-pa(k)", "Inalienable Possessive" => "-yuk" },
+                 "Pragmatic Evidentials" =>
+                   { "Dubitative" => "-chari",
+                     "Supposition" => "-shi",
+                     "Exceditive Affirmation" => "-karin",
+                     "Confirmative Affirmation" => "-mari" },
+                 "Temporal" =>
+                   { "Habitual Preterite" => "-k",
+                     "Simple Preterite" => "-rka",
+                     "Perfective/Past Participle" => "-shka" } }

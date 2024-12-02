@@ -1,0 +1,3 @@
+class HiddenAnswerFlashCard < FlashCard
+
+end
